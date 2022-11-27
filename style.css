@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark);
+    opacity: 0.8;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 .5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--warning);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar .brand {
+    font-weight: 400;
+}
+
+.navbar h1 {
+    font-size: 3rem;
+}
+
+.navbar span {
+    color: var(--warning);
+}
+
+/* header */
+
+.main-header {
+    background-image: url('../img/bg-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+.main-header.blog {
+    background-image: url('../img/bg-2.jpeg');
+    height: 50vh;
+}
+
+.main-header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.main-header * {
+    z-index: 5;
+}
+
+.main-header .content h1 {
+    font-size: 5.5rem;
+}
+
+.main-header .content p {
+    font-size: 2.3rem;
+    max-width: 60rem;
+    margin: 2rem 0 3rem;
+}
+
+/* icons */
+.icons {
+    padding: 30px;
+}
+
+.icons h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.icons i {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+
+/* about */
+.about {
+    color: #fff;
+}
+
+.about h2 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.about p {
+    margin: 2rem 0;
+}
+
+/* gallery */
+.gallery img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* cards */
+.card {
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* teams */
+.teams img {
+    border-radius: 50%;
+}
+
+.teams img:hover {
+    opacity: 0.7;
+}
+
+/* contact */
+.contact-form {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.contact-form .form-control {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+    border: 1px solid #f5f5f5;
+}
+
+.contact-form .btn {
+    margin-top: 20px;
+}
+
+.contact h2 {
+    font-size: 4rem;
+}
+
+/* article */
+.articles {
+    padding: 3rem 5rem;
+}
+
+.article {
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+}
+
+.footer a {
+    color: var(--danger);
+}
+
+.footer a:hover {
+    opacity: 0.7;
+}
+
+.footer .social a {
+    margin-right: 10px;
+}
+
+/* mobile */
+@media(max-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .navbar a {
+        padding: 10px;
+        margin: 0 3px;
+    }
+
+    .teams img {
+        width: 70%;
+    }
+}
+/* player audio */
+.player audio
+{
+    width: 100px;
+    outline: none;
+}
+
+ul#main li ul{
+    display: none;
+}
+ul#main li:hover ul{
+    display: block;
+}
+
+
+
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+
+
+
+
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Position the image container (needed to position the left and right arrows) */
+      .container {
+        position: relative;
+      }
+      
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+      
+      /* Add a pointer when hovering over the thumbnail images */
+      .cursor {
+        cursor: pointer;
+      }
+      
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* Container for image text */
+      .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+      }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Six columns side by side */
+      .column {
+        float: left;
+        width: 16.66%;
+      }
+      
+      /* Add a transparency effect for thumnbail images */
+      .demo {
+        opacity: 0.6;
+      }
+      
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }
